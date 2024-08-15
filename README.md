@@ -1,5 +1,9 @@
 # README
 
+The Odin Project – RoR APIs – Kittens
+
+The goal of this project is to set up a Rails app to be a data-producing API.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
