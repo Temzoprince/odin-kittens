@@ -1,10 +1,20 @@
 class PigeonsController < ApplicationController
   def index
     @pigeons = Pigeon.all
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => @pigeons }
+    end
   end
 
   def show
     @pigeon = Pigeon.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => @pigeon }
+    end
   end
 
   def new
