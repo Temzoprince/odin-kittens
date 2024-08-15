@@ -1,0 +1,18 @@
+<h1>List of all Pigeons</h1>
+<%= link_to "Create a new pigeon", new_pigeon_path %>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<ul>
+  <% @pigeons.each do |pigeon| %>
+    <li>
+      <p>Name: <%= link_to pigeon.name, pigeon %></p>
+      <p>Age: <%= pigeon.age %></p>
+      <p>Cuteness: <%= pigeon.cuteness %></p>
+      <p>Softness: <%= pigeon.softness %></p>
+    </li>
+    <br>
+  <% end %>
+</ul>

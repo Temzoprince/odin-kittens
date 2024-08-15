@@ -1,0 +1,15 @@
+<%= form_with model: [ pigeon ] do |form| %>
+  <%= form.label :name, "Pigeon name:"%>
+  <%= form.text_field :name, value: pigeon.name || "Type the name of your event" %>
+  <br><br>
+  <%= form.label :age, "Age:" %>
+  <%= form.number_field :age, in: 0.0..50.0, step: 1.0 %>
+  <br><br>
+  <%= form.label :cuteness, "Cuteness:"%>
+  <%= form.text_field :cuteness, value: pigeon.cuteness || "Describe in words how cute your pigeon is" %>
+  <br><br>
+  <%= form.label :name, "Softness:"%>
+  <%= form.text_field :softness, value: pigeon.softness || "Describe in words how soft your pigeon is" %>
+  <br><br>
+  <%= form.submit "Submit" %>
+<% end %>

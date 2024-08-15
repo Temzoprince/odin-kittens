@@ -1,0 +1,17 @@
+<h1>Pigeon: <%= @pigeon.name %></h1>
+<%= link_to "Pigeons list", pigeons_path %>
+<%= link_to "Edit this pigeon", edit_pigeon_path %>
+<%= link_to "Delete this pigeon", pigeon_path(@pigeon), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<p>Name: <%= @pigeon.name %></p>
+<p>Age: <%= @pigeon.age %></p>
+<p>Cuteness: <%= @pigeon.cuteness %></p>
+<p>Softness: <%= @pigeon.softness %></p>
+<br>

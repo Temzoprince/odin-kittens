@@ -1,0 +1,17 @@
+<h1> Create a new Pigeom <h1>
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<% if @pigeon.errors.any? %>
+  <div id="error explanation">
+  <h4><%= pluralize(@pigeon.errors.count, "error") %> prohibited this pigeon from being created</h4>
+  <ul>
+    <% @pigeon.errors.each do |error| %>
+      <li><%=error.full_message %></li>
+    <% end %>
+  </ul>
+  </div>
+<% end %> 
+
+<%= render "pigeons/form", pigeon: @pigeon %>
